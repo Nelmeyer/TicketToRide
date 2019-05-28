@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Ticket to Ride</title>
+	<meta charset="utf-8" />
+    <script src="scripts/jquery-3.4.1.min.js"></script>
+    <script src="mainPage.js"></script>
+    <link rel="stylesheet" href="mainPage.css" />
+</head>
+<body>
+    <img class="splash" src="images/T2RHeader.jpg" alt="Ticket to Ride!" />
+    <div>
+        <button id="highButton">High Scores</button>
+    </div>
+    <p>Please specify the game and players below.</p>
+    <div id="stats">
+        <div>
+            <a>Game Type</a>
+            <select id="gameType">
+                <option id="normal">Normal</option>
+                <option id="double">Double</option>
+                <option id="doubleWhammy">Double Whammy</option>
+            </select>
+        </div>
+        <div id="playerTable">
+            <p><button id="addPlayer" class="btn-dark" >Add Player</button></p>
+        </div>
+        <p><button id="saveButton">Start Scores</button></p>
+    </div>
+    <div id="scores" style="visibility:hidden">
+        <p id="playerLabel">Capture score for Player</p>
+        <table>
+            <tr>
+                <td>
+                    <button id="stationMinus">-</button><button id="stationPlus">+</button>
+                    <a>     </a><img class="icons" src="images/trainstation.png" /><a>Stations</a>
+                </td>
+                <td><input id="stationTotal" value="0" /></td>
+            </tr>
+            <tr>
+                <td><button id="train1Minus">-</button><button id="train1Plus">+</button><a>1</a><img class="icons" src="images/traincart.png" /></td>
+                <td><input id="train1Total" value="0" /></td>
+            </tr>
+            <tr>
+                <td><button id="train2Minus">-</button><button id="train2Plus">+</button><a>2</a><img class="icons" src="images/traincart.png" /><img class="icons" src="images/traincart.png" /></td>
+                <td><input id="train2Total" value="0" /></td>
+            </tr>
+            <tr>
+                <td><button id="train3Minus">-</button><button id="train3Plus">+</button><a>3</a><img class="icons" src="images/traincart.png" /><img class="icons" src="images/traincart.png" /><img class="icons" src="images/traincart.png" /></td>
+                <td><input id="train3Total" value="0" /></td>
+            </tr>
+            <tr>
+                <td><button id="train4Minus">-</button><button id="train4Plus">+</button><a>4</a><img class="icons" src="images/traincart.png" /><img class="icons" src="images/traincart.png" /><img class="icons" src="images/traincart.png" /><img class="icons" src="images/traincart.png" /></td>
+                <td><input id="train4Total" value="0" /></td>
+            </tr>
+            <tr>
+                <td><button id="train5Minus">-</button><button id="train5Plus">+</button><a>5</a><img class="icons" src="images/traincart.png" /><img class="icons" src="images/traincart.png" /><img class="icons" src="images/traincart.png" /><img class="icons" src="images/traincart.png" /><img class="icons" src="images/traincart.png" /></td>
+                <td><input id="train5Total" value="0" /></td>
+            </tr>
+            <tr>
+                <td><button id="train6Minus">-</button><button id="train6Plus">+</button><a>6</a><img class="icons" src="images/traincart.png" /><img class="icons" src="images/traincart.png" /><img class="icons" src="images/traincart.png" /><img class="icons" src="images/traincart.png" /><img class="icons" src="images/traincart.png" /><img class="icons" src="images/traincart.png" /></td>
+                <td><input id="train6Total" value="0" /></td>
+            </tr>
+            <tr>
+                <td><button id="train8Minus">-</button><button id="train8Plus">+</button><a>8</a><img class="icons" src="images/traincart.png" /><img class="icons" src="images/traincart.png" /><img class="icons" src="images/traincart.png" /><img class="icons" src="images/traincart.png" /><img class="icons" src="images/traincart.png" /><img class="icons" src="images/traincart.png" /><img class="icons" src="images/traincart.png" /><img class="icons" src="images/traincart.png" /></td>
+                <td><input id="train8Total" value="0" /></td>
+            </tr>
+            <tr>
+                <td><button id="missionMinus">-</button><button id="missionPlus">+</button><a>     </a><img class="icons" src="images/missionicon.png" /><a>Missions</a></td>
+                <td><input id="missionTotal" value="0" /></td>
+            </tr>
+        </table>
+        <p><button id="doneButton">Done</button></p>
+</div>
+    <div id="results"></div>
+    <div id="highscore"></div>
+</body>
+</html>

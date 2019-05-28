@@ -1,0 +1,29 @@
+﻿body {
+    width:600px;
+    position:center;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.splash {
+    width:600px;
+}
+
+h1 {
+    font-family: 'Franklin Gothic Book';
+}
+
+a {
+    font-weight:bold;
+    padding: 8px;
+}
+
+img {
+    align-content: center;
+}
+
+.icons {
+    width:40px;
+}
