@@ -94,8 +94,8 @@ function buttonPlusMinusClick(e) {
         plusMinus = "Minus";
     }
     var targetId = targetControl.id.replace(plusMinus, "");
-    var playerScore = $("#playerScore" + currentPlayer); // document.getElementById("playerScore" + currentPlayer);
-    if (!playerScore.val()) {
+    var playerScore = document.getElementById("playerScore" + currentPlayer); //$("#playerScore" + currentPlayer);
+    if (!playerScore.value) {
         playerScore.value = 0;
     }
     var amount = 1;
@@ -123,8 +123,6 @@ function buttonPlusMinusClick(e) {
             amount = 21;
             break;
         case "mission":
-            //var missionInput = document.getElementById("missionTotal");
-            //amount = missionInput.val();
             amount = $("#missionTotal").val();
             break;
     }
@@ -227,7 +225,7 @@ function doneClick() {
 
         if (highIndex == -1) {
             var newHighScore = new HighScore();
-            highIndex = highScores.length;
+            highIndex = 0;
             newHighScore.id = highScores.length;
             newHighScore.gameType = gameType;
             newHighScore.player = winPlayer;
@@ -239,12 +237,13 @@ function doneClick() {
         //Winner
         if (winScore >= highScore) {
             if (winScore == highScore) {
-                alert("Congratulations " + winPlayer + ", you share the highest score for the " + gameType + " game with " + highScores[highIndex].player + "!");
                 if (highScores[highIndex].player.indexOf(winPlayer) < 0) {
                     winPlayer = highScores[highIndex].player + " & " + winPlayer;
+                    alert("Congratulations " + winPlayer + ", you share the highest score for the " + gameType + " game with " + highScores[highIndex].player + "!");
                 }
                 else {
                     winPlayer = highScores[highIndex].player;
+                    alert("Congratulations " + winPlayer + ", you beat your own highest score for the " + gameType + " game!");
                 }
             }
             else {
